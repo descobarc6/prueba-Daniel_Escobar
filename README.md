@@ -27,16 +27,16 @@ El programa sigue los siguientes pasos para resolver la expresión matemática:
 # Ejecución del programa
 Para ejecutar el programa, sigue estos pasos:
 
-Abre una terminal o línea de comandos.
-Navega hasta la ubicación del archivo que contiene el código de la calculadora.
-Asegúrate de tener instalado Python en tu sistema.
-Ejecuta el siguiente comando para ejecutar el programa:
+1. Abre una terminal o línea de comandos.
+2. Navega hasta la ubicación del archivo que contiene el código de la calculadora.
+3. Asegúrate de tener instalado Python en tu sistema.
+4. Ejecuta el siguiente comando para ejecutar el programa:
 
 python nombre_del_archivo.py
 
-Se mostrará un mensaje para ingresar la operación matemática.
-Ingresa la operación matemática y presiona Enter.
-El programa mostrará el resultado de la operación o mostrará un mensaje de error si ocurre alguna excepción.
+1. Se mostrará un mensaje para ingresar la operación matemática.
+2. Ingresa la operación matemática y presiona Enter.
+3. El programa mostrará el resultado de la operación o mostrará un mensaje de error si ocurre alguna excepción.
 
 # Pruebas unitarias
 
