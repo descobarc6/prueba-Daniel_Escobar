@@ -1,49 +1,85 @@
-# Calculadora - Documentación
-Este es un programa de calculadora que evalúa y resuelve expresiones matemáticas básicas. Puedes ingresar una expresión matemática y la calculadora devolverá el resultado de la operación.
+# Control de Nómina de Empleados
 
-# Algoritmo
-El programa sigue los siguientes pasos para resolver la expresión matemática:
+Esta es una aplicación de ejemplo para el control de nómina de empleados utilizando Python, Django y Django Rest Framework.
 
-1. Se recibe una expresión matemática del usuario como entrada.
-2. Se crea una instancia de la clase Calculadora con la expresión ingresada.
-3. Se verifica que la longitud de la expresión no exceda los 20 caracteres. En caso de excederlo, se lanza un error ValueError.
-4. Se llama al método resolver_operacion() de la instancia de Calculadora.
-5. Dentro del método resolver_operacion(), se inicia la evaluación de la expresión llamando al método evaluar_expresion().
-6. Se inicializan las listas operandos y operadores.
-7. Se itera sobre cada caracter de la expresión:
-  * Si el caracter es un dígito o un punto decimal, se agrega al número en construcción.
-  * Si el caracter es un operador (suma, resta, multiplicación, división, potencia o raíz cuadrada), se realizan las siguientes acciones:
-    * Si hay un número en construcción, se agrega a la lista de operandos.
-    * Si el operador es un paréntesis de apertura, se agrega a la lista de operadores.
-    * Si el operador es un paréntesis de cierre, se realizan las siguientes acciones:
-      * Se realizan operaciones hasta encontrar el paréntesis de apertura correspondiente.
-      * Se elimina el paréntesis de apertura de la lista de operadores.
-    * Si el operador tiene una prioridad mayor que los operadores existentes en la lista, se agrega a la lista de operadores.
-      * En caso contrario, se realizan las operaciones necesarias para mantener la prioridad correcta de los operadores.
-8. Si aún hay un número en construcción, se agrega a la lista de operandos.
-9. Se realizan las operaciones pendientes hasta vaciar la lista de operadores.
-10. Se devuelve el resultado que se encuentra en la lista de operandos.
+## Instalación
 
-# Ejecución del programa
-Para ejecutar el programa, sigue estos pasos:
+1. Clona este repositorio:
 
-1. Abre una terminal o línea de comandos.
-2. Navega hasta la ubicación del archivo que contiene el código de la calculadora.
-3. Asegúrate de tener instalado Python en tu sistema.
-4. Ejecuta el siguiente comando para ejecutar el programa:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>```
+1. Ve al directorio del proyecto:
 
-python nombre_del_archivo.py
+cd control_nomina
 
-1. Se mostrará un mensaje para ingresar la operación matemática.
-2. Ingresa la operación matemática y presiona Enter.
-3. El programa mostrará el resultado de la operación o mostrará un mensaje de error si ocurre alguna excepción.
+2. Crea y activa un entorno virtual (opcional, pero se recomienda):
 
-# Pruebas unitarias
+python -m venv venv
+source venv/bin/activate
 
-El programa también incluye pruebas unitarias para verificar el funcionamiento correcto de la calculadora. Estas pruebas cubren escenarios de suma, resta, multiplicación, división, potencia, raíz cuadrada, división por cero, expresiones con paréntesis y longitud máxima de expresión.
+3. Instala las dependencias:
 
-Para ejecutar las pruebas unitarias, sigue los mismos pasos anteriores para ejecutar elprograma, pero en lugar de ejecutar el programa principal, ejecuta el siguiente comando:
+pip install Django
+pip install djangorestframework
 
-python nombre_del_archivo_pruebas.py
+# Configuracion de la Base de Datos
 
-Esto ejecutará las pruebas unitarias y mostrará los resultados de las pruebas en la terminal o línea de comandos. Verificarás si todas las pruebas pasan correctamente sin errores.
+Esta aplicación utiliza la base de datos SQLite por defecto. No se requiere ninguna configuración adicional.
+
+#Migraciones de la Base de Datos
+
+1. Aplica las migraciones para crear las tablas de la base de datos:
+
+python manage.py migrate
+
+2. Crea un superusuario para acceder al panel de administración:
+
+python manage.py createsuperuser
+
+Sigue las instrucciones para proporcionar un nombre de usuario, 
+dirección de correo electrónico (opcional) y contraseña. 
+Por ejemplo, puedes utilizar los siguientes valores:
+
+Username: Daniel
+Email address: (leave blank)
+Password: facil123
+Password (again): facil123
+
+# Ejecucion del Servidor de Desarrollo
+
+1. Inicia el servidor de desarrollo de Django:
+
+python manage.py runserver
+
+2. Abre tu navegador web y accede a la siguiente URL:
+
+http://127.0.0.1:8000/
+
+Esto te llevará a la interfaz de la API, donde puedes realizar las operaciones CRUD en los empleados.
+
+3.  Para acceder al panel de administración, ve a la siguiente URL:
+
+http://127.0.0.1:8000/admin/
+
+Ingresa las credenciales de superusuario que creaste anteriormente (por ejemplo, username: Daniel, password: facil123).
+
+# Informe de Nomina
+
+Puedes generar un informe de nómina que muestra el nombre del empleado,
+ salario y el total de la nómina. Para ello, utiliza el siguiente endpoint:
+ 
+GET /nomina/informe/
+
+Este endpoint proporcionará un informe en formato JSON con el total de la nómina y los detalles de los empleados.
+
+# Autenticación y Autorización
+
+Esta aplicación no implementa autenticación y autorización en la protección de los endpoints de la API. Se recomienda implementar estas funcionalidades en un entorno de producción para garantizar la seguridad de los datos.
+
+# Licencia
+
+Este proyecto se distribuye bajo la Licencia MIT. Puedes consultar el archivo LICENSE para obtener más información.
+
+Recuerda reemplazar `<URL_DEL_REPOSITORIO>` en el paso 1 con la URL de tu repositorio si deseas proporcionar un enlace directo para clonar el repositorio.
+
+Espero que esto te sea útil para crear el archivo `README.md` y documentar adecuadamente tu aplicación de control de nómina de empleados.
