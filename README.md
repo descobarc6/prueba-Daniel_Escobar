@@ -4,25 +4,25 @@ Este es un programa de calculadora que evalúa y resuelve expresiones matemátic
 # Algoritmo
 El programa sigue los siguientes pasos para resolver la expresión matemática:
 
-Se recibe una expresión matemática del usuario como entrada.
-Se crea una instancia de la clase Calculadora con la expresión ingresada.
-Se verifica que la longitud de la expresión no exceda los 20 caracteres. En caso de excederlo, se lanza un error ValueError.
-Se llama al método resolver_operacion() de la instancia de Calculadora.
-Dentro del método resolver_operacion(), se inicia la evaluación de la expresión llamando al método evaluar_expresion().
-Se inicializan las listas operandos y operadores.
-Se itera sobre cada caracter de la expresión:
-Si el caracter es un dígito o un punto decimal, se agrega al número en construcción.
-Si el caracter es un operador (suma, resta, multiplicación, división, potencia o raíz cuadrada), se realizan las siguientes acciones:
-Si hay un número en construcción, se agrega a la lista de operandos.
-Si el operador es un paréntesis de apertura, se agrega a la lista de operadores.
-Si el operador es un paréntesis de cierre, se realizan las siguientes acciones:
-Se realizan operaciones hasta encontrar el paréntesis de apertura correspondiente.
-Se elimina el paréntesis de apertura de la lista de operadores.
-Si el operador tiene una prioridad mayor que los operadores existentes en la lista, se agrega a la lista de operadores.
-En caso contrario, se realizan las operaciones necesarias para mantener la prioridad correcta de los operadores.
-Si aún hay un número en construcción, se agrega a la lista de operandos.
-Se realizan las operaciones pendientes hasta vaciar la lista de operadores.
-Se devuelve el resultado que se encuentra en la lista de operandos.
+1. Se recibe una expresión matemática del usuario como entrada.
+2. Se crea una instancia de la clase Calculadora con la expresión ingresada.
+3. Se verifica que la longitud de la expresión no exceda los 20 caracteres. En caso de excederlo, se lanza un error ValueError.
+4. Se llama al método resolver_operacion() de la instancia de Calculadora.
+5. Dentro del método resolver_operacion(), se inicia la evaluación de la expresión llamando al método evaluar_expresion().
+6. Se inicializan las listas operandos y operadores.
+7. Se itera sobre cada caracter de la expresión:
+* Si el caracter es un dígito o un punto decimal, se agrega al número en construcción.
+* Si el caracter es un operador (suma, resta, multiplicación, división, potencia o raíz cuadrada), se realizan las siguientes acciones:
+* Si hay un número en construcción, se agrega a la lista de operandos.
+* Si el operador es un paréntesis de apertura, se agrega a la lista de operadores.
+* Si el operador es un paréntesis de cierre, se realizan las siguientes acciones:
+* Se realizan operaciones hasta encontrar el paréntesis de apertura correspondiente.
+* Se elimina el paréntesis de apertura de la lista de operadores.
+* Si el operador tiene una prioridad mayor que los operadores existentes en la lista, se agrega a la lista de operadores.
+* En caso contrario, se realizan las operaciones necesarias para mantener la prioridad correcta de los operadores.
+8. Si aún hay un número en construcción, se agrega a la lista de operandos.
+9. Se realizan las operaciones pendientes hasta vaciar la lista de operadores.
+10. Se devuelve el resultado que se encuentra en la lista de operandos.
 
 # Ejecución del programa
 Para ejecutar el programa, sigue estos pasos:
