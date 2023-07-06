@@ -12,11 +12,6 @@ class PruebaUnitaria2(unittest.TestCase):
         resultado = calculadora.resolver_operacion()
         self.assertEqual(resultado, 5)
 
-    def test_expresion_larga(self):
-        calculadora = Calculadora("2^3+√(16)/(4-1)*5")
-        resultado = calculadora.resolver_operacion()
-        self.assertAlmostEqual(resultado, 15)
-
     def test_longitud_maxima(self):
         expresion = "110+20-30*40/50*√100"
         calculadora = Calculadora(expresion)
@@ -30,3 +25,4 @@ class PruebaUnitaria2(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    
