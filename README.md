@@ -1,9 +1,7 @@
-# prueba-Daniel_Escobar
-Prueba logica, backend, frontend
-Calculadora - Documentación
+# Calculadora - Documentación
 Este es un programa de calculadora que evalúa y resuelve expresiones matemáticas básicas. Puedes ingresar una expresión matemática y la calculadora devolverá el resultado de la operación.
 
-Algoritmo
+# Algoritmo
 El programa sigue los siguientes pasos para resolver la expresión matemática:
 
 Se recibe una expresión matemática del usuario como entrada.
@@ -25,7 +23,8 @@ En caso contrario, se realizan las operaciones necesarias para mantener la prior
 Si aún hay un número en construcción, se agrega a la lista de operandos.
 Se realizan las operaciones pendientes hasta vaciar la lista de operadores.
 Se devuelve el resultado que se encuentra en la lista de operandos.
-Ejecución del programa
+
+# Ejecución del programa
 Para ejecutar el programa, sigue estos pasos:
 
 Abre una terminal o línea de comandos.
@@ -38,7 +37,9 @@ python nombre_del_archivo.py
 Se mostrará un mensaje para ingresar la operación matemática.
 Ingresa la operación matemática y presiona Enter.
 El programa mostrará el resultado de la operación o mostrará un mensaje de error si ocurre alguna excepción.
-Pruebas unitarias
+
+# Pruebas unitarias
+
 El programa también incluye pruebas unitarias para verificar el funcionamiento correcto de la calculadora. Estas pruebas cubren escenarios de suma, resta, multiplicación, división, potencia, raíz cuadrada, división por cero, expresiones con paréntesis y longitud máxima de expresión.
 
 Para ejecutar las pruebas unitarias, sigue los mismos pasos anteriores para ejecutar elprograma, pero en lugar de ejecutar el programa principal, ejecuta el siguiente comando:
